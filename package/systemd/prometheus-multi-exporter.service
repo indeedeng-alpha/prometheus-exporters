@@ -1,0 +1,12 @@
+[Unit]
+Description=Prometheus Multi-Exporter
+After=network.target
+
+[Service]
+ExecStart=/usr/bin/multi-exporter
+User=prometheus-multi-exporter
+Group=prometheus-multi-exporter
+Restart=on-failure
+
+[Install]
+WantedBy=multi-user.target
